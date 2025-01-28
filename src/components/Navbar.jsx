@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 
 export default function Navbar() {
-  const { user } = useAuth()
+  const { user, signOut } = useAuth()
 
   return (
     <nav className="bg-gray-900/50 backdrop-blur-sm fixed w-full z-50">

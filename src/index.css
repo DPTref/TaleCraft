@@ -22,47 +22,26 @@ body {
   overflow: hidden;
 }
 
-.fantasy-bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%239C92AC' fill-opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
+.story-text {
+  animation: typing 2s steps(30, end);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
 }
 
-.magic-sparkle {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: white;
-  border-radius: 50%;
-  filter: blur(1px);
-  animation: sparkle 4s linear infinite;
-  opacity: 0;
-}
-
-@keyframes sparkle {
-  0% {
-    transform: translateY(0) scale(0);
-    opacity: 0;
+@keyframes typing {
+  from {
+    width: 0;
   }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100px) scale(1);
-    opacity: 0;
+  to {
+    width: 100%;
   }
 }
 
-.hero-section {
-  position: relative;
-  background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.9));
-  border: 1px solid rgba(128, 90, 213, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+.bg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.bg-gray-300 {
+  background-color: #e2e8f0;
 }
