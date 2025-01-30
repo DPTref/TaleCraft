@@ -13,21 +13,39 @@ export default function Navbar() {
             <span className="text-xl font-bold">TaleCraft</span>
           </Link>
           <div className="flex space-x-4">
-            <Link to="/" className="hover:text-purple-400 transition">Home</Link>
-            <Link to="/about" className="hover:text-purple-400 transition">About</Link>
+            <Link 
+              to="/" 
+              className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition"
+            >
+              Home
+            </Link>
+            <Link 
+              to="/about" 
+              className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition"
+            >
+              About
+            </Link>
             {user ? (
-              <Link 
-                to="/dashboard" 
-                className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg transition"
-              >
-                Dashboard
-              </Link>
+              <>
+                <Link 
+                  to="/dashboard" 
+                  className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg transition"
+                >
+                  Dashboard
+                </Link>
+                <button
+                  onClick={signOut}
+                  className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition"
+                >
+                  Log Out
+                </button>
+              </>
             ) : (
               <Link 
                 to="/login" 
                 className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg transition"
               >
-                Start Your Story
+                Sign In
               </Link>
             )}
           </div>
